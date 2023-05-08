@@ -19,6 +19,8 @@
 \LARGE\bfseries これまでの研究実績概要
 \end{center}
 
+\section*{研究のスコープと専門性}
+
 \begin{wrapfigure}{r}[0pt]{0.4\linewidth}
  \centering
  \includegraphics[width=\linewidth,trim=120 20 120 40]{PL-overview.pdf}
@@ -40,25 +42,84 @@ Formalismの橋渡しを考えるという点は，常に一貫している．
 長期的に取り組んできた．PL実装技術の観点では，コンパイラに関する専門性が
 高く，特に自動並列化に関しては，世界に屈指の専門性があると自負している．
 過去の研究業績においてもコンパイラや自動並列化に関する仕事（業績
-\ref{pub:pldi21}, \ref{pub:ipdps21}, \ref{pub:jip20:centaurus},
-\ref{pub:splash19}, \ref{pub:adbis18}, \ref{pub:jip17:hadoop},
-\ref{pub:aplas14}, \ref{pub:pro13:tree}, \ref{pub:pldi11}，
-\ref{pub:aplas09}）が多く，PL分野のトップ国際会議PLDIで出版されたものも
-ある（業績\ref{pub:pldi21},\ref{pub:pldi11}）．
+\cite{pldi21:red_par,ipdps21:plex,jip20:centaurus,splash19:nbody,adbis18:par_xpath,jip17:hadoop,aplas14:sd_dfa,pro13:tree_par,pldi11:red_par,aplas09:gpgpu_skel}
+）が多く，PL分野のトップ国際会議PLDIで出版されたものもある（業績
+\cite{pldi21:red_par,pldi11:red_par}）．
 
 \paragraph{研究トピックの広がり}
 私の研究のスコープは，並列計算に限ったものではない．先に述べたように，
 Computing・Abstraction・Formalismの橋渡しに繋がると考える事柄は，全てス
 コープに入る．学生の興味や共同研究者の専門性に合わせて，PL実装に係る様々
-なトピックに取り組んできた．例えば，業績\ref{pub:gpce14:libdsl}，
-\ref{pub:aplas16}，\ref{pub:ppl22:plags}，\ref{pub:pro140}，
-\ref{pub:jssst22}，\ref{pub:splash22}は，計算の記述（つまりプログラミン
-グ）を正しく分かりやすくするためのシステムであり，Computing・Abstraction・
-Formalismの橋渡しとして機能する．また，特定のComputing関する事例研究（例
-えば，業績\ref{pub:icpp15}，\ref{pub:ispass21}，\ref{pub:ppl22:sfa}，
-\ref{pub:ispass22}）も重視している．これは，具体的なComputingの事例を分
-析し，それを定式化・抽象化することで，地に足のついたPLの成果に繋がると考
-えているからである．
+なトピックに取り組んできた．例えば，業績
+\cite{gpce14:libdsl,aplas16:pyblame,ppl22:plags,pro22o:far_memory,jssst22:checkpoint,splash22:mvnb}
+，は，計算の記述（つまりプログラミング）を正しく分かりやすくするためのシ
+ステムであり，Computing・Abstraction・Formalismの橋渡しとして機能する．
+また，特定のComputing関する事例研究（例えば，業績
+\cite{icpp15:htm,ispass21:ib_odp,ppl22:sfa,ispass22:vipp,ppl23c3:otf_sfa}）
+も重視している．これは，具体的なComputingの事例を分析し，それを定式化・
+抽象化することで，地に足のついたPLの成果に繋がると考えているからである．
+
+
+\section*{個別的な研究内容の概要}
+扱う研究のトピックは，大きく分けて，プログラムの変換や解析を扱うコンパイ
+ル技術と，プログラミングを支援するライブラリやメモリ管理を扱うランタイム
+技術の2つに分類される．
+
+\subsection*{コンパイル技術}
+
+\paragraph{半環に基づく並列化}
+
+ \cite{pldi21:red_par}
+
+ \cite{pldi11:red_par}
+
+ \cite{jssst13:sd_dfa,aplas14:sd_dfa}
+
+ \cite{jip17:hadoop}
+
+ \cite{pro13:tree_par}
+
+\paragraph{代数的性質に基づく効率化}
+\cite{splash19:nbody}
+\cite{aplas09:gpu_skel}
+
+\paragraph{有限オートマトンに基づく並列化}
+\cite{ipdps21:plex,ppl22:sfa,ppl23c3:otf_sfa}
+ \cite{ppl23:zdd}
+
+\paragraph{DSL開発支援}
+
+\cite{ppl23c3:satysfi_ted}
+\cite{gpce14:libdsl}
+
+\paragraph{プログラム検査・検証}
+\cite{ppl21c3:mixed-size_genmc,ppl23c3:mixed-size_genmc}
+
+\cite{ppl22:plags}
+\cite{aplas16:pyblame}
+
+\subsection*{ランタイム技術}
+
+\paragraph{木・グラフ処理}
+
+\cite{fhpc16:s6raph,jip21:hyper_gemini}
+\cite{ijpp16:tree_skel,jssst16:nbody_locality,jssst14:par_traversal,pro19o:centaurus,jip20:centaurus}
+\cite{adbis18:par_xpath,cloudcomp20:xpath}
+
+\cite{ngc18:pregel}
+\cite{ispass22:vipp}
+
+\paragraph{並行性制御}
+\cite{icpp15:htm,jip22:compth}
+
+\paragraph{リモートメモリアクセス}
+\cite{ipdrm20:menps,ispass21:ib_odp,jip22:argodsm,pro22o:far_memory,ppl23c3:far_memory,ppl23c3:redn}
+
+\paragraph{チェックポインティング}
+\cite{splash22:mvnb,ppl23:notebook}
+
+\cite{jssst22:checkpoint}
+
 
 \newpage
 \begin{center}
@@ -82,7 +143,7 @@ PL実装研究を教員単独で進めることには限界がある．これは
 いてから痛切に感じてきたことである．大きな労力が掛かる実装研究を続ける現
 実的な方策は，共同研究の和を広げて，効率的な分業を進めることである．そう
 すれば，一人では大きすぎる労力でも対処できる．これは絵空事ではなく，実際
-に私と中丸氏との共同研究（業績\ref{pub:splash22}）において実現した．具体
+に私と中丸氏との共同研究（業績\cite{splash22:mvnb,ppl23:notebook}）において実現した．具体
 的には，システムを開発して実験するのが得意な中丸氏が，研究のストーリーを
 作って論文を書くのが得意な私と組んで，綿密な連携をとることで，プロジェク
 トは驚くほど効率的に進めることができ，複数の論文発表に短時間でこぎつける
@@ -131,7 +192,9 @@ PIとして研究室を主宰するときには，研究指導者としての役
        良く研究できる環境へと，積極的に送り出す．
 \end{itemize}
 博士課程の部分については不確定要素が多いが，修士課程までの部分については，
-現在指導している学生（業績\ref{pub:pro140}，\ref{pub:jip:argodsm}の筆頭
+現在指導している博士課程学生（業績
+\cite{pro22o:far_memory,jip22:argodsm,ppl23c3:far_memory}の筆頭著者）や
+修士修了で企業研究所に就職した学生（業績\cite{ppl22:sfa,ppl23c3:otf_sfa}の筆頭
 著者）の反応と成長から，有効性の感触を得ている．この研究指導の枠組みを，
 学生の合わせて改良・発展させていくことを考えている．
 
@@ -153,14 +216,14 @@ PIとして研究室を主宰するときには，研究指導者としての役
 
 IPPでは着任以降，教材や課題の改訂・保守の業務の大部分を担ってきた．2022
 年現在においては，公開オンライン教科書
-\footnote{\url{utokyo-ipp.github.io/course}}の改訂作業は全て私が担ってい
-る．この教科書の評判はとても良く，東大内に留まらず，Twitter上などで一般
-の人からも好評を博し，その品質の高さを称賛されている．
+\footnote{\url{https://utokyo-ipp.github.io/}}の改訂作業は全て私が担って
+いる．この教科書の評判はとても良く，東大内に留まらず，Twitter上などで一
+般の人からも好評を博し，その品質の高さを称賛されている．
 
 IPPの授業については，2020年度にオンライン授業に移行する段階で，授業設計
 に大きく寄与し，現在のオンライン授業の形態を作った．特筆すべき仕事は，課
 題演習・採点・講評を助けるWebアプリケーションPLAGS UT（業績
-\ref{pub:ppl22:plags}）を開発し，授業で運用している点である．PLAGS UTは，
+\cite{ppl22:plags}）を開発し，授業で運用している点である．PLAGS UTは，
 テストコードを使って，課題提出時に自動評価し，即座にフィードバックを返す．
 PLAGS UTに基づく自動評価付きの課題演習は，9割以上の受講生から高評価を得
 ている．PLAGS UTは，自身が担当するPPPの他，私が担当していない教養学部の
@@ -178,7 +241,7 @@ PLAGS UTの導入は，プログラミング演習授業の生産性を革命的
 な文脈でも，PLAGS UTは有効に機能し，特に非常勤講師に対して，高品質の課題
 演習のパッケージを提供することに役立っている．
 
-以上ような教育DXは，学外でも高く評価された（業績\ref{pub:axies22}）．
+以上ような教育DXは，学外でも高く評価された（業績\cite{axies22:plags}）．
 
 \section*{着任後の教育構想}
 
